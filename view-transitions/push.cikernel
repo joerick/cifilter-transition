@@ -1,0 +1,17 @@
+
+kernel vec4 fadeEffect(sampler image, sampler targetImage, float time, vec2 direction)
+{
+	vec2 pos = samplerCoord(image);
+    vec2 size = samplerSize(image);
+    
+    vec2 offset = time * direction * size;
+    
+    vec2 samplePosition = pos + offset;
+    vec2 wrappedSamplePosition = mod(samplePosition, size);
+    
+    vec4 useTarget = vec4(float(any(notEqual(samplePosition, wrappedSamplePosition))));
+    
+    return compare(-useTarget, 
+                   sample(targetImage, wrappedSamplePosition),
+                   sample(image, wrappedSamplePosition));
+}

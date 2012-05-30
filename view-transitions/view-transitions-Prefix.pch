@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'view-transitions' target in the 'view-transitions' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

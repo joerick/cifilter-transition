@@ -1,0 +1,1 @@
+Example Core Image transition filter

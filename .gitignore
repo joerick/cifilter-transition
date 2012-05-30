@@ -1,0 +1,23 @@
+# finder
+.DS_Store
+
+# documentation output directory
+documentation/html
+
+# ignore everything in the xcodeproj bundle but the pbxproj file and the xcshareddata
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+xcuserdata/
+project.xcworkspace
+
+.svn
+
+# automatic backup files
+*~.nib
+*~
+
+# build products
+build
